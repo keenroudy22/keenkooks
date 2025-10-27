@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keen Kook’n Picks — The Kitchen Stays Hot 🔥</title>
+  <meta name="description" content="Keen Kook’n Picks — daily specials, recent hits, and slips straight from @keenkooks. The Kitchen Stays Hot." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <style>
+    :root{ --kk-blue:#0f1c2e; --kk-blue2:#0c233f; --kk-accent:#3ba3ff; }
+    body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .glass{ background: rgba(15,28,46,.65); backdrop-filter: blur(8px); }
+    .pattern{ background-image: radial-gradient(transparent 0,transparent 30%,rgba(255,255,255,.04) 31%,rgba(255,255,255,.04) 32%), radial-gradient(transparent 0,transparent 30%,rgba(255,255,255,.04) 31%,rgba(255,255,255,.04) 32%); background-size: 24px 24px; background-position: 0 0,12px 12px; }
+    .card{ border-radius: 1.25rem; box-shadow: 0 12px 28px rgba(0,0,0,.35); }
+    .tw{ color: #1d9bf0; }
+  </style>
+</head>
+<body class="bg-[var(--kk-blue)] text-white selection:bg-blue-500/30">
+  <!-- ================= NAV ================= -->
+  <header class="sticky top-0 z-40 bg-[var(--kk-blue2)]/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+      <img src="assets/logo.png" alt="Keen Kook'n logo" class="h-9 w-9 rounded-full ring-2 ring-white/20" onerror="this.src='https://dummyimage.com/80x80/0b1b31/ffffff.png&text=KK'"/>
+      <div class="font-extrabold tracking-tight">Keen Kook’n Picks</div>
+      <nav class="ml-auto flex gap-4 text-sm">
+        <a class="hover:underline" href="#specials">Today’s Specials</a>
+        <a class="hover:underline" href="#hits">Recent Hits</a>
+        <a class="hover:underline" href="#menu">Weekly Menu</a>
+        <a class="hover:underline" href="#follow">Follow</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="relative">
+    <img src="assets/hero.jpg" alt="Kitchen background" class="absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.remove()">
+    <div class="relative pattern">
+      <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">The Kitchen Stays Hot <span class="align-[-.2em]">🔥</span></h1>
+          <p class="mt-3 text-white/80">Chef‑themed picks, clean slips, and blue‑flame vibes. Fresh plates daily from <a class="tw hover:underline" href="https://x.com/keenkooks" target="_blank" rel="noopener">@keenkooks</a>.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#specials" class="px-5 py-3 bg-[var(--kk-accent)] text-black font-semibold rounded-2xl hover:opacity-90">See Today’s Specials</a>
+            <a href="https://x.com/keenkooks" target="_blank" rel="noopener" class="px-5 py-3 glass rounded-2xl border border-white/10">Follow on X</a>
+          </div>
+        </div>
+        <div class="glass card p-4 sm:p-6">
+          <div class="text-sm text-white/70">Pinned Tweet</div>
+          <!-- Replace the URL with your actual pinned tweet URL -->
+          <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/keenkooks/status/1234567890"></a></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SPECIALS ================= -->
+  <section id="specials" class="max-w-6xl mx-auto px-4 py-14">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl font-extrabold">Today’s Specials</h2>
+      <span class="text-white/60 text-sm">Edit the specials in <code>specialsData</code> below.</span>
+    </div>
+    <div id="specialsGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- ================= RECENT HITS ================= -->
+  <section id="hits" class="bg-[var(--kk-blue2)]/70 border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 class="text-3xl font-extrabold">Recent Hits</h2>
+      <p class="text-white/70 mt-1">Drop slip images into <code>/winners</code> and update the array in the script.</p>
+      <div id="hitsGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- ================= WEEKLY MENU ================= -->
+  <section id="menu" class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-3xl font-extrabold">Weekly Menu</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="card glass p-6">
+        <ul class="space-y-3 text-white/90">
+          <li><span class="font-semibold">Monday:</span> Recap & record reset</li>
+          <li><span class="font-semibold">Tuesday:</span> Taco Tuesday picks</li>
+          <li><span class="font-semibold">Wednesday:</span> Quick Cook props</li>
+          <li><span class="font-semibold">Thursday:</span> Prime‑Time Plate (TNF)</li>
+          <li><span class="font-semibold">Friday:</span> Fry‑Day Specials</li>
+          <li><span class="font-semibold">Saturday:</span> Soccer & college slate</li>
+          <li><span class="font-semibold">Sunday:</span> Sunday Feast (main parlay)</li>
+        </ul>
+      </div>
+      <div class="card glass p-6">
+        <h3 class="font-bold">How to update</h3>
+        <ol class="list-decimal list-inside text-white/80 space-y-2 mt-2">
+          <li>Replace <code>assets/logo.png</code> and <code>assets/hero.jpg</code> with your images.</li>
+          <li>Edit <code>specialsData</code> and <code>hitsData</code> in the script.</li>
+          <li>Swap tweet URLs in the hero and any cards to auto‑embed.</li>
+          <li>Commit to GitHub → Pages publishes automatically.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOLLOW ================= -->
+  <section id="follow" class="bg-[var(--kk-blue2)]/70 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-extrabold">Join the Kitchen</h2>
+        <p class="text-white/80 mt-2">Turn on post notifs and don’t miss what’s cooking.</p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="https://x.com/keenkooks" target="_blank" rel="noopener" class="px-5 py-3 bg-[var(--kk-accent)] text-black font-semibold rounded-2xl">Follow @keenkooks</a>
+          <a href="#specials" class="px-5 py-3 glass rounded-2xl border border-white/10">See Today’s Specials</a>
+        </div>
+      </div>
+      <div class="card glass p-6">
+        <h3 class="font-bold">Pinned slip</h3>
+        <!-- Example embedded tweet; replace URL -->
+        <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/keenkooks/status/2345678901"></a></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-white/60 text-sm py-8">© <span id="yr"></span> Keen Kook’n Picks — The Kitchen Stays Hot 🔥</footer>
+
+  <script>
+    // ======== QUICK CONFIG =========
+    // Put your hero/logo images in /assets folder with these names:
+    // - assets/logo.png (your chef hat avatar)
+    // - assets/hero.jpg (blue kitchen background)
+
+    // Edit your specials here. Each item renders a card automatically.
+    const specialsData = [
+      {
+        title: "Sunday Feast (Main Parlay)",
+        odds: "+142",
+        legs: ["Steelers ML", "Pickens 3+ Recs", "Warren 40+ Rush"],
+        note: "Another plate served. Let’s eat.",
+        tweet: "https://x.com/keenkooks/status/1234567890"
+      },
+      {
+        title: "Quick Cook (1st Qtr Sizzle)",
+        odds: "+210",
+        legs: ["Over 9.5 1Q points", "Home team first to 10"],
+        note: "In and out of the oven.",
+        tweet: "https://x.com/keenkooks/status/3456789012"
+      },
+      {
+        title: "Anytime TD Sampler",
+        odds: "+385",
+        legs: ["Pickens ATD", "Warren ATD"],
+        note: "Sampler platter — chef’s choice.",
+        tweet: "https://x.com/keenkooks/status/4567890123"
+      }
+    ];
+
+    // Recent hits gallery. Add images to /winners and update src/label.
+    const hitsData = [
+      { src: "winners/hit-746.png", label: "+746 Odds ✅ Easy money", link: "https://x.com/keenkooks/status/5678901234" },
+      { src: "winners/hit-te-sampler.png", label: "TE Sampler ✅", link: "https://x.com/keenkooks/status/6789012345" },
+      { src: "winners/hit-ml-parlay.png", label: "+142 Parlay cooked", link: "https://x.com/keenkooks/status/7890123456" }
+    ];
+
+    // ======== RENDER =========
+    const specialsGrid = document.getElementById('specialsGrid');
+    specialsData.forEach((s,i)=>{
+      const el = document.createElement('article');
+      el.className = 'card glass p-6 flex flex-col';
+      el.innerHTML = `
+        <div class="flex items-start gap-3">
+          <img src="assets/logo.png" class="h-10 w-10 rounded-full ring-2 ring-white/20" onerror="this.style.display='none'"/>
+          <div>
+            <h3 class="font-bold text-lg">${s.title}</h3>
+            <div class="text-white/70 text-sm">Odds <span class="font-semibold">${s.odds}</span> • ${s.legs.length} legs</div>
+          </div>
+        </div>
+        <ul class="mt-4 space-y-1 text-white/90">${s.legs.map(l=>`<li>✅ ${l}</li>`).join('')}</ul>
+        <p class="mt-3 text-white/70">${s.note ?? ''}</p>
+        ${s.tweet ? `<div class='mt-4'><blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><a href="${s.tweet}"></a></blockquote></div>` : ''}
+      `;
+      specialsGrid.appendChild(el);
+    });
+
+    const hitsGrid = document.getElementById('hitsGrid');
+    hitsData.forEach(h=>{
+      const a = document.createElement('a');
+      a.className = 'relative block group overflow-hidden card';
+      a.href = h.link || '#'; a.target = '_blank'; a.rel = 'noopener';
+      a.innerHTML = `
+        <img src="${h.src}" alt="${h.label}" class="w-full h-64 object-cover group-hover:scale-105 transition" onerror="this.src='https://dummyimage.com/800x600/0b1b31/ffffff.png&text=Drop+slip+image+in+/winners'"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">${h.label}</span></div>
+      `;
+      hitsGrid.appendChild(a);
+    });
+
+    // Utilities
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
