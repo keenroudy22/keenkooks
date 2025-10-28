@@ -3,60 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Keen Kook’n Picks — Winners & Weekly Menu</title>
-  <meta name="description" content="Keen Kook’n Picks — daily specials, recent hits, and slips straight from @keenkooks. The Kitchen Stays Hot." />
+  <title>Keen Kook’n Picks — The Kitchen Stays Hot 🔥</title>
+  <meta name="description" content="Keen Kook’n Picks — schedule and winners from @keenkooks." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <style>
     :root{ --kk-blue:#0f1c2e; --kk-blue2:#0c233f; --kk-accent:#3ba3ff; }
     body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
     .glass{ background: rgba(15,28,46,.65); backdrop-filter: blur(8px); }
-    .pattern{ background-image: radial-gradient(transparent 0,transparent 30%,rgba(255,255,255,.04) 31%,rgba(255,255,255,.04) 32%), radial-gradient(transparent 0,transparent 30%,rgba(255,255,255,.04) 31%,rgba(255,255,255,.04) 32%); background-size: 24px 24px; background-position: 0 0,12px 12px; }
     .card{ border-radius: 1.25rem; box-shadow: 0 12px 28px rgba(0,0,0,.35); }
-    .tw{ color: #1d9bf0; }
   </style>
 </head>
-<body class="bg-[var(--kk-blue)] text-white selection:bg-blue-500/30">
-  <!-- ================= NAV ================= -->
+<body class="bg-[var(--kk-blue)] text-white">
+  <!-- HEADER -->
   <header class="sticky top-0 z-40 bg-[var(--kk-blue2)]/80 backdrop-blur border-b border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
-      <img src="assets/logo.png" alt="Keen Kook'n logo" class="h-9 w-9 rounded-full ring-2 ring-white/20" onerror="this.src='https://dummyimage.com/80x80/0b1b31/ffffff.png&text=KK'"/>
+      <img src="assets/logo.png" alt="Keen Kook'n logo" class="h-9 w-9 rounded-full ring-2 ring-white/20"/>
       <div class="font-extrabold tracking-tight">Keen Kook’n Picks</div>
       <nav class="ml-auto flex gap-4 text-sm">
-        <a class="hover:underline" href="#specials">Today’s Specials</a>
-        <a class="hover:underline" href="#hits">Recent Hits</a>
         <a class="hover:underline" href="#menu">Weekly Menu</a>
-        <a class="hover:underline" href="#follow">Follow</a>
+        <a class="hover:underline" href="#big">Big Winners</a>
+        <a class="hover:underline" href="#hits">Recent Winners</a>
+        <a class="hover:underline" href="https://x.com/keenkooks" target="_blank" rel="noopener">Follow</a>
       </nav>
     </div>
   </header>
 
-  <!-- ================= HERO ================= -->
+  <!-- HERO -->
   <section class="relative">
-    <img src="assets/hero.jpg" alt="Kitchen background" class="absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.remove()">
-    <div class="relative pattern">
+    <img src="assets/hero.jpg" alt="Kitchen background" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="relative">
       <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 grid lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">The Kitchen Stays Hot <span class="align-[-.2em]">🔥</span></h1>
-          <p class="mt-3 text-white/80">Chef‑themed picks, clean slips, and blue‑flame vibes. Fresh plates daily from <a class="tw hover:underline" href="https://x.com/keenkooks" target="_blank" rel="noopener">@keenkooks</a>.</p>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">The Kitchen Stays Hot 🔥</h1>
+          <p class="mt-3 text-white/80">Serving winning plates all season. Follow <a class="text-blue-400 hover:underline" href="https://x.com/keenkooks" target="_blank" rel="noopener">@keenkooks</a> for live action.</p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#specials" class="px-5 py-3 bg-[var(--kk-accent)] text-black font-semibold rounded-2xl hover:opacity-90">See Today’s Specials</a>
-            <a href="https://x.com/keenkooks" target="_blank" rel="noopener" class="px-5 py-3 glass rounded-2xl border border-white/10">Follow on X</a>
+            <a href="#menu" class="px-5 py-3 bg-[var(--kk-accent)] text-black font-semibold rounded-2xl hover:opacity-90">View Weekly Menu</a>
+            <a href="#big" class="px-5 py-3 glass rounded-2xl border border-white/10">See Winners</a>
           </div>
         </div>
-        <div class="glass card p-4 sm:p-6">
-          <div class="text-sm text-white/70">Pinned Tweet</div>
+        <div class="card glass p-6">
+          <div class="text-lg font-semibold">Keen Kook’n Picks</div>
+          <p class="text-white/80">Clean. Simple. Static.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= WEEKLY SCHEDULE ================= -->
+  <!-- WEEKLY MENU (STATIC) -->
   <section id="menu" class="max-w-6xl mx-auto px-4 py-14">
-    <h2 class="text-3xl font-extrabold">Chef’s Weekly Menu</h2>
-    <p class="text-white/70 mt-1">Depedning on the time of year, schedule may shift. </p>
+    <h2 class="text-3xl font-extrabold">🍳 The Chef’s Weekly Menu</h2>
     <div class="mt-6 grid md:grid-cols-2 gap-6">
       <div class="card glass p-6">
         <ul class="space-y-3 text-white/90">
@@ -70,166 +68,69 @@
         </ul>
       </div>
       <div class="card glass p-6">
-        <h3 class="font-bold">Posting cadence</h3>
-        <p class="text-white/80 mt-2">Keep the site simple: feature only big winners and a rolling wall of recent hits. All live lines stay on <a class="tw hover:underline" href="https://x.com/keenkooks" target="_blank">@keenkooks</a>.</p>
-        <ul class="list-disc list-inside text-white/80 mt-3 space-y-1">
-          <li>Drop slip images into <code>/winners</code></li>
-          <li>Tag a few as <code>big</code> to auto‑promote</li>
-          <li>Optional: link to the tweet for each slip</li>
-        </ul>
+        <p class="text-white/90">Stay in the kitchen — the stove never cools 👨‍🍳🔥</p>
+        <a href="https://x.com/keenkooks" target="_blank" rel="noopener" class="inline-block mt-4 px-5 py-3 bg-[var(--kk-accent)] text-black font-semibold rounded-2xl">Follow @keenkooks</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= FEATURED BIG WINNERS ================= -->
+  <!-- BIG WINNERS (STATIC) -->
   <section id="big" class="bg-[var(--kk-blue2)]/70 border-y border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-14">
-      <div class="flex items-end justify-between gap-4">
-        <h2 class="text-3xl font-extrabold">Big Winners</h2>
-        <span class="text-white/60 text-sm">Add or remove in <code>bigWins</code>.</span>
+      <h2 class="text-3xl font-extrabold">Big Winners</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <a class="relative block group overflow-hidden card" href="https://x.com/keenkooks/status/1981563236458643498" target="_blank" rel="noopener">
+          <img src="winners/big1.jpg" alt="Big Winner" class="w-full h-64 object-cover group-hover:scale-105 transition"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">+26,796 Odds — Jackpot Plate ✅</span></div>
+        </a>
+        <a class="relative block group overflow-hidden card" href="https://x.com/keenkooks/status/1981700285480444355" target="_blank" rel="noopener">
+          <img src="winners/big2.jpg" alt="Big Winner" class="w-full h-64 object-cover group-hover:scale-105 transition"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">+6452 Odds — ATTD Lotto ✅</span></div>
+        </a>
+        <a class="relative block group overflow-hidden card" href="https://x.com/keenkooks/status/1982646064231674192" target="_blank" rel="noopener">
+          <img src="winners/big3.jpg" alt="Big Winner" class="w-full h-64 object-cover group-hover:scale-105 transition"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">+746 Odds — Easy Money ✅</span></div>
+        </a>
       </div>
-      <div id="bigGrid" class="mt-6 grid md:grid-cols-3 gap-6"></div>
     </div>
   </section>
 
-  <!-- ================= RECENT WINNERS ================= -->
+  <!-- RECENT WINNERS (STATIC) -->
   <section id="hits" class="max-w-6xl mx-auto px-4 py-14">
-    <div class="flex items-end justify-between gap-4">
-      <h2 class="text-3xl font-extrabold">Recent Winners</h2>
-      <span class="text-white/60 text-sm">Drop images into <code>/winners</code> and update <code>hitsData</code>.</span>
-    </div>
-    <div id="hitsGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-  </section>
-
-  <!-- ================= CALL TO ACTION ================= -->
-  <section id="follow" class="bg-[var(--kk-blue2)]/70 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-3xl font-extrabold">Follow for Live Plates</h2>
-        <p class="text-white/80 mt-2">Lines and sweat posts live on Twitter — the site just showcases the plates we served.</p>
-        <div class="mt-5 flex flex-wrap gap-3">
-          <a href="https://x.com/keenkooks" target="_blank" rel="noopener" class="px-5 py-3 bg-[var(--kk-accent)] text-black font-semibold rounded-2xl">Follow @keenkooks</a>
-          <a href="#big" class="px-5 py-3 glass rounded-2xl border border-white/10">See Big Winners</a>
-        </div>
-      </div>
-      <div class="card glass p-6">
-        <h3 class="font-bold">Pinned slip</h3>
-        <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/keenkooks/status/2345678901"></a></blockquote>
-      </div>
-    </div>
-  </section>
-  <section id="hits" class="bg-[var(--kk-blue2)]/70 border-y border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-14">
-      <h2 class="text-3xl font-extrabold">Recent Hits</h2>
-      <p class="text-white/70 mt-1">Drop slip images into <code>/winners</code> and update the array in the script.</p>
-      <div id="hitsGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    </div>
-  </section>
-
-  <!-- ================= WEEKLY MENU ================= -->
-  <section id="menu" class="max-w-6xl mx-auto px-4 py-14">
-    <h2 class="text-3xl font-extrabold">Weekly Menu</h2>
-    <div class="mt-6 grid md:grid-cols-2 gap-6">
-      <div class="card glass p-6">
-        <ul class="space-y-3 text-white/90">
-          <li><span class="font-semibold">Monday:</span> Recap & record reset</li>
-          <li><span class="font-semibold">Tuesday:</span> Taco Tuesday picks</li>
-          <li><span class="font-semibold">Wednesday:</span> Quick Cook props</li>
-          <li><span class="font-semibold">Thursday:</span> Prime‑Time Plate (TNF)</li>
-          <li><span class="font-semibold">Friday:</span> Fry‑Day Specials</li>
-          <li><span class="font-semibold">Saturday:</span> Soccer & college slate</li>
-          <li><span class="font-semibold">Sunday:</span> Sunday Feast (main parlay)</li>
-        </ul>
-      </div>
-      <div class="card glass p-6">
-        <h3 class="font-bold">How to update</h3>
-        <ol class="list-decimal list-inside text-white/80 space-y-2 mt-2">
-          <li>Replace <code>assets/logo.png</code> and <code>assets/hero.jpg</code> with your images.</li>
-          <li>Edit <code>specialsData</code> and <code>hitsData</code> in the script.</li>
-          <li>Swap tweet URLs in the hero and any cards to auto‑embed.</li>
-          <li>Commit to GitHub → Pages publishes automatically.</li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FOLLOW ================= -->
-  <section id="follow" class="bg-[var(--kk-blue2)]/70 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-3xl font-extrabold">Join the Kitchen</h2>
-        <p class="text-white/80 mt-2">Turn on post notifs and don’t miss what’s cooking.</p>
-        <div class="mt-5 flex flex-wrap gap-3">
-          <a href="https://x.com/keenkooks" target="_blank" rel="noopener" class="px-5 py-3 bg-[var(--kk-accent)] text-black font-semibold rounded-2xl">Follow @keenkooks</a>
-          <a href="#specials" class="px-5 py-3 glass rounded-2xl border border-white/10">See Today’s Specials</a>
-        </div>
-      </div>
-      <div class="card glass p-6">
-        <h3 class="font-bold">Pinned slip</h3>
-        <!-- Example embedded tweet; replace URL -->
-        <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/keenkooks/status/2345678901"></a></blockquote>
-      </div>
+    <h2 class="text-3xl font-extrabold">Recent Winners</h2>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a class="relative block group overflow-hidden card" href="https://x.com/keenkooks/status/1982779644160905517" target="_blank" rel="noopener">
+        <img src="winners/1.jpg" alt="Winner" class="w-full h-64 object-cover group-hover:scale-105 transition"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">EASY ✅</span></div>
+      </a>
+      <a class="relative block group overflow-hidden card" href="https://x.com/keenkooks/status/1982779644160905517" target="_blank" rel="noopener">
+        <img src="winners/2.jpg" alt="Winner" class="w-full h-64 object-cover group-hover:scale-105 transition"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">Quick Cook ✅</span></div>
+      </a>
+      <a class="relative block group overflow-hidden card" href="https://x.com/keenkooks/status/1982779644160905517" target="_blank" rel="noopener">
+        <img src="winners/3.jpg" alt="Winner" class="w-full h-64 object-cover group-hover:scale-105 transition"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">Late‑Night Snack ✅</span></div>
+      </a>
+      <a class="relative block group overflow-hidden card" href="https://x.com/keenkooks/status/1982779644160905517" target="_blank" rel="noopener">
+        <img src="winners/4.jpg" alt="Winner" class="w-full h-64 object-cover group-hover:scale-105 transition"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">Quick Cook ✅</span></div>
+      </a>
+      <a class="relative block group overflow-hidden card" href="https://x.com/keenkooks/status/1983006546843054406" target="_blank" rel="noopener">
+        <img src="winners/5.jpg" alt="Winner" class="w-full h-64 object-cover group-hover:scale-105 transition"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">MONDAY MIX ✅</span></div>
+      </a>
     </div>
   </section>
 
   <footer class="text-center text-white/60 text-sm py-8">© <span id="yr"></span> Keen Kook’n Picks — The Kitchen Stays Hot 🔥</footer>
-
-  <script>
-    // ======== QUICK CONFIG =========
-    const TW_HANDLE = 'keenkooks';
-
-    // Big winners (featured at the top)
-    const bigWins = [
-      { src: 'winners/big1.jpg', label: '+26,796 Odds — Jackpot Plate ✅', link: 'https://x.com/keenkooks/status/1981563236458643498' },
-      { src: 'winners/big2.jpg', label: '+6452 Odds - ATTD Lotto ✅', link: 'https://x.com/keenkooks/status/1981700285480444355' },
-      { src: 'winners/big3.jpg', label: '+746 Odds — Easy money ✅', link: 'https://x.com/keenkooks/status/1982646064231674192' }
-    ];
-
-    // Rolling grid of recent winners (last 9-12 is plenty)
-    const hitsData = [
-      { src: 'winners/1.jpg', label: 'EASY ✅', link: 'https://x.com/keenkooks/status/1982779644160905517' },
-      { src: 'winners/2.jpg', label: 'Quick Cook ✅', link: 'https://x.com/keenkooks/status/1982779644160905517' },
-      { src: 'winners/4.jpg', label: 'Quick Cook ✅', link: 'https://x.com/keenkooks/status/1982779644160905517' },
-      { src: 'winners/3.jpg', label: 'Late-Night Snack ✅', link: 'https://x.com/keenkooks/status/1982779644160905517' },
-      { src: 'winners/5.jpg', label: 'MONDAY MIX ✅', link: 'https://x.com/keenkooks/status/1983006546843054406' }
-    ];
-
-    // ======== RENDER =========
-    // Render Big Winners
-    const bigGrid = document.getElementById('bigGrid');
-    if (bigGrid) {
-      bigWins.forEach(h=>{
-        const a = document.createElement('a');
-        a.className = 'relative block group overflow-hidden card';
-        a.href = h.link || '#'; a.target = '_blank'; a.rel = 'noopener';
-        a.innerHTML = `
-          <img src="${h.src}" alt="${h.label}" class="w-full h-64 object-cover group-hover:scale-105 transition" onerror="this.src='https://dummyimage.com/800x600/0b1b31/ffffff.png&text=Put+featured+slip+in+/winners'"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">${h.label}</span></div>
-        `;
-        bigGrid.appendChild(a);
-      });
-    }
-
-    // Render Recent Winners
-    const hitsGrid = document.getElementById('hitsGrid');
-    hitsData.forEach(h=>{
-      const a = document.createElement('a');
-      a.className = 'relative block group overflow-hidden card';
-      a.href = h.link || '#'; a.target = '_blank'; a.rel = 'noopener';
-      a.innerHTML = `
-        <img src="${h.src}" alt="${h.label}" class="w-full h-64 object-cover group-hover:scale-105 transition" onerror="this.src='https://dummyimage.com/800x600/0b1b31/ffffff.png&text=Drop+slip+image+in+/winners'"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-        <div class="absolute bottom-3 left-3 right-3 text-sm"><span class="bg-black/50 px-2 py-1 rounded">${h.label}</span></div>
-      `;
-      hitsGrid.appendChild(a);
-    });
-
-    // Utilities
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    // Swap hero tweet blocks to use your handle if left blank
-    document.querySelectorAll('.twitter-tweet a[href$="status/1234567890"]').forEach(a=>a.href=`https://x.com/${TW_HANDLE}`);
-
-  </script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
